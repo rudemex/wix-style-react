@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/labeler@main
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: "${{ secrets.GH_TOKEN }}"
   contributor:
     name: Label contributors
     if: ${{ !contains('EgoziE, shlomitc, argshook, mykas, TalZa1810, gendeld, sivanharel, bamai, Zivilekin, egidijusja, roibWix, daugerdas, shahata, mosheKenshoo, jonathanadler, nitayneeman', github.actor) }}
@@ -19,5 +19,5 @@ jobs:
     steps:
     - uses: actions/labeler@main
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: "${{ secrets.GH_TOKEN }}"
         configuration-path: .github/labeler-contribution.yml
